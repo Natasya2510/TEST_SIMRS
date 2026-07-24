@@ -1,7 +1,7 @@
 <?php
 
 $serverName = "LAPTOP-A14J2JIC\\SQLEXPRESS";
-$database   = "SIMRS_TEST";
+$database   = "SIMRS";
 
 try {
 
