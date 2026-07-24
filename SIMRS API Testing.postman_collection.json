@@ -1,0 +1,254 @@
+{
+  "info": {
+    "_postman_id": "06500891-955b-4222-862c-a2b19684cb0b",
+    "name": "SIMRS API Testing",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "56859896",
+    "_collection_link": "https://go.postman.co/collection/56859896-06500891-955b-4222-862c-a2b19684cb0b?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "1. GET All Pasien",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost/SIMRS/api/get_pasien.php",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "path": [
+            "SIMRS",
+            "api",
+            "get_pasien.php"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "2. GET Detail Pasien",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost/SIMRS/api/get_pasien_detail.php?id=5",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "path": [
+            "SIMRS",
+            "api",
+            "get_pasien_detail.php"
+          ],
+          "query": [
+            {
+              "key": "id",
+              "value": "5"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "3. POST Add Pasien",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"no_rm\":\"09999\",\r\n    \"nama_pasien\":\"Budi Santoso\",\r\n    \"jenis_kelamin\":\"L\",\r\n    \"tgl_lahir\":\"1995-01-01\",\r\n    \"kode_poliklinik\":\"POL001\",\r\n    \"alamat\":\"Bekasi\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost/SIMRS/api/post_pasien.php",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "path": [
+            "SIMRS",
+            "api",
+            "post_pasien.php"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "4. GET All Pasien",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost/SIMRS/api/get_pasien.php",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "path": [
+            "SIMRS",
+            "api",
+            "get_pasien.php"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "5. POST Add Pasien (Duplicate Test)",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"no_rm\":\"05358\",\r\n    \"nama_pasien\":\"Bp. Samsuri\",\r\n    \"jenis_kelamin\":\"L\",\r\n    \"tgl_lahir\":\"1980-11-22\",\r\n    \"kode_poliklinik\":\"POL001\",\r\n    \"alamat\":\"Jln Raya Bekasi\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost/SIMRS/api/post_pasien.php",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "path": [
+            "SIMRS",
+            "api",
+            "post_pasien.php"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "6. PUT Update Pasien (id=7)",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"alamat\":\"Jakarta Selatan\",\r\n    \"kode_poliklinik\":\"POL002\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost/SIMRS/api/put_pasien.php?id=7",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "path": [
+            "SIMRS",
+            "api",
+            "put_pasien.php"
+          ],
+          "query": [
+            {
+              "key": "id",
+              "value": "7"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "7. GET Detail Pasien (id=7)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost/SIMRS/api/get_pasien_detail.php?id=7",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "path": [
+            "SIMRS",
+            "api",
+            "get_pasien_detail.php"
+          ],
+          "query": [
+            {
+              "key": "id",
+              "value": "7"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "8. DELETE Pasien (id=7)",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost/SIMRS/api/delete_pasien.php?id=7",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "path": [
+            "SIMRS",
+            "api",
+            "delete_pasien.php"
+          ],
+          "query": [
+            {
+              "key": "id",
+              "value": "7"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "9. GET All Pasien",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost/SIMRS/api/get_pasien.php",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "path": [
+            "SIMRS",
+            "api",
+            "get_pasien.php"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
